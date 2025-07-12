@@ -41,3 +41,32 @@ locations.forEach(location => {
   `;
   cardsDiv.appendChild(card);
 });
+const coordinates = {
+  "MUSSORIE": { lat: 30.45, lon: 78.07 },
+  "KASHMIR": { lat: 34.08, lon: 74.83 },
+  "LADAKH": { lat: 34.15, lon: 77.58 },
+  "GOA": { lat: 15.30, lon: 74.12 },
+  "BANGLORE": { lat: 12.97, lon: 77.59 },
+  "KEDARNATH": { lat: 30.73, lon: 79.07 }
+};
+
+Object.entries(coordinates).forEach(([city, { lat, lon }]) => {
+  fetch(`https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current_weather=true`)
+    .then(res => res.json())
+    .then(data => {
+      const temp = data.current_weather.temperature;
+      const wind = data.current_weather.windspeed;
+
+      const cardElements = document.querySelectorAll("#cards > div");
+      cardElements.forEach(card => {
+        if (card.querySelector("h3").textContent.includes(city)) {
+          const weather = document.createElement("p");
+          weather.className = "mt-2 text-sm text-blue-500";
+          weather.textContent = `🌡️ ${temp}°C | Wind: ${wind} km/h`;
+          card.appendChild(weather);
+        }
+      });
+    })
+    .catch(err => console.error(`Weather error for ${city}:`, err));
+});
+
