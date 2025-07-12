@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>DORA THE EXPLORER</title>
+  <!-- Tailwind CDN -->
+ <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+</head>
+<body class="bg-gray-50 font-sans">
+
+<!-- Navigation -->
+<nav class="bg-gradient-to-r from-blue-500 via-cyan-500 to-teal-500 shadow-lg fixed w-full z-20">
+  <div class="max-w-7xl mx-auto px-4 flex justify-between items-center h-16 text-white">
+    <div class="text-2xl font-bold text-white drop-shadow-lg">DORA THE EXPLORER</div>
+
+
+    <div class="hidden md:flex space-x-6 text-sm font-medium">
+      <a href="#" class="flex items-center space-x-1 hover:text-yellow-200 transition"><i class="fas fa-home"></i><span>Home</span></a>
+      <a href="#" class="flex items-center space-x-1 hover:text-yellow-200 transition"><i class="fas fa-map-marker-alt"></i><span>Places</span></a>
+      <a href="#" class="flex items-center space-x-1 hover:text-yellow-200 transition"><i class="fas fa-image"></i><span>Gallery</span></a>
+      <a href="#" class="flex items-center space-x-1 hover:text-yellow-200 transition"><i class="fas fa-envelope"></i><span>Contact</span></a>
+    </div>
+    <div class="md:hidden">
+      <button id="menu-btn" class="text-2xl text-white focus:outline-none hover:text-yellow-200 transition">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile menu -->
+  <div id="mobile-menu" class="hidden flex flex-col px-4 pb-4 space-y-2 md:hidden bg-gradient-to-br from-teal-600 via-cyan-600 to-blue-600 text-white">
+    <a href="#" class="hover:text-yellow-200 flex items-center space-x-1"><i class="fas fa-home"></i><span>Home</span></a>
+    <a href="#" class="hover:text-yellow-200 flex items-center space-x-1"><i class="fas fa-map-marker-alt"></i><span>Places</span></a>
+    <a href="#" class="hover:text-yellow-200 flex items-center space-x-1"><i class="fas fa-image"></i><span>Gallery</span></a>
+    <a href="#" class="hover:text-yellow-200 flex items-center space-x-1"><i class="fas fa-envelope"></i><span>Contact</span></a>
+  </div>
+</nav>
+
+
+<!-- Hero Section -->
+<section class="h-screen bg-cover bg-center flex justify-center items-center text-white relative"
+  style="background-image: url('INDIA.jpg');">
+  <div class="absolute inset-0 bg-black opacity-50"></div>
+  <div class="z-10 text-center px-4">
+    <h1 class="text-4xl md:text-6xl font-bold mb-4">
+  Discover Breathtaking Destination in <span class="text-yellow-300">INDIA</span>
+</h1>
+
+    <p class="text-lg md:text-xl mb-6">Join us in exploring the beauty of our INDIA.</p>
+    <a href="#places" class="bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-full text-lg font-semibold">Explore Now</a>
+  </div>
+</section>
+
+
+<!-- Video Section -->
+<!-- Vimeo Travel Video Section -->
+<section class="max-w-4xl mx-auto my-12 px-4">
+  <h2 class="text-2xl font-bold mb-4 text-center"><i class="fas fa-play-circle"></i> Discover Landscapes</h2>
+  <div class="aspect-w-16 aspect-h-9">
+    <iframe class="w-full h-96 rounded-lg"
+      src="https://player.vimeo.com/video/76979871"
+      title="The New Vimeo Player (Demo)"
+      frameborder="0"
+      allow="autoplay; fullscreen; picture-in-picture"
+      allowfullscreen>
+    </iframe>
+  </div>
+</section>
+
+
+
+
+<!-- Audio -->
+<section class="max-w-4xl mx-auto my-12 px-4 text-center">
+  <h2 class="text-2xl font-bold mb-4"><i class="fas fa-music"></i> Relax with Music</h2>
+  <audio controls>
+    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+</section>
+
+<!-- Cards -->
+<section id="places" class="max-w-6xl mx-auto my-12 px-4">
+  <h2 class="text-2xl font-bold mb-6 text-center"> POPULAR DESTINATIONS</h2>
+  <div id="cards" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+</section>
+
+<!-- Footer with SVG -->
+<!-- Footer -->
+<footer class="bg-gradient-to-r from-indigo-600 via-blue-600 to-teal-600 text-white py-8 mt-12 text-center">
+  <div class="flex justify-center items-center space-x-3">
+    <!-- Location Pin SVG -->
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+        d="M12 2C8 2 4 6 4 10c0 5.25 6 10 8 12s8-6.75 8-12c0-4-4-8-8-8z" />
+      <circle cx="12" cy="10" r="3" fill="white"/>
+    </svg>
+    <span class="text-lg font-semibold tracking-wide">DORA THE EXPLORER © 2025 | Explore India & Beyond</span>
+  </div>
+</footer>
+
+
+<!-- JavaScript -->
+<script src="script.js"></script>
+</body>
+</html>
